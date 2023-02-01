@@ -14,36 +14,36 @@
 
       <div class="img-left">
         <div class="frame">
-          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" ></a>
+          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" alt=""></a>
         </div>
         <div class="frame">
-          <a @click="showAbout = true"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png"></a>
+          <a @click="showAbout = true"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png" alt=""></a>
         </div>
       </div>
 
       <div class="center">
         <div class="frame-main">
-          <a @click="showResume = true"><img  lass="frame-img" src="./assets/img/Abstract3D-0-text.png"></a>
+          <a @click="showResume = true"><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt=""></a>
         </div>
       </div>
 
       <div class="img-right">
         <div class="frame">
-          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png"></a>
+          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png" alt=""></a>
         </div>
         <div class="frame">
-          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png"></a>
+          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png" alt=""></a>
         </div>
       </div>
     </div>
     <div class="cube-container">
-      <div id="cube">
-        <div id="front"></div>
-        <div id="back"></div>
-        <div id="left"></div>
-        <div id="right"></div>
-        <div id="top"></div>
-        <div id="bottom"></div>
+      <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
         <div class="shadow"></div>
       </div>
     </div>
@@ -62,9 +62,9 @@ import ResumeModal from './components/ResumeModal.vue'
 export default {
   name: "App",
   components: {
-    AboutModal, 
-    ProjectsModal, 
-    ContactModal, 
+    AboutModal,
+    ProjectsModal,
+    ContactModal,
     ResumeModal,
   },
   data() {
@@ -79,24 +79,23 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap%27");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 .main{
   max-width: 100%;
   height: 100vh;
-  margin: 0px auto;
-  padding: 0px 20px 0px 20px;
-  background: radial-gradient(75% 35% at 50% 95%, rgba(33, 33, 35, 0.6) 20%, rgba(80, 82, 98, 0) 90%), 
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  background: radial-gradient(75% 35% at 50% 95%, rgba(33, 33, 35, 0.6) 20%, rgba(80, 82, 98, 0) 90%),
   linear-gradient(rgba(28, 35, 50, 0) 15%, rgb(228, 228, 228) 80%);
 }
 .title {
-  font-family: Cinzel;
+  font-family: "Cinzel",serif;
   font-size: 95px;
-  color: white;
+  color: rgb(196, 196, 196);
   position: fixed;
   top: 10%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   overflow: visible;
   white-space: nowrap;
@@ -106,7 +105,6 @@ export default {
   top: 55%;
   left: 50%;
   width: 65%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;}
@@ -114,9 +112,6 @@ export default {
   display: flex;
   flex-direction: column;
   margin-right: 90px;
-}
-.img-center {
-  justify-content: center;
 }
 .img-right {
   display: flex;
@@ -127,10 +122,9 @@ div[class^="frame"] {
 	display: inline-block;
   height: auto;
   margin-bottom: 25px;
-	padding: 7.5px;
-	background: #f5f5f5;
-	background-image: linear-gradient(#a9a8a3, #878781);
-	box-shadow: inset 0 2px 5px rgba(0,0,0,.6),0 5px 2px rgba(0,0,0,.1), 0 10px 20px rgba(0,0,0,.8);
+	padding: 5.625pt;
+  background: #f5f5f5 linear-gradient(#a9a8a3, #878781);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,.6),0 5px 2px rgba(0,0,0,.1), 0 10px 20px rgba(0,0,0,.8);
 	position: relative;
 	overflow: hidden;
 }
@@ -144,105 +138,50 @@ div[class^="frame"] {
   max-width: 1250px;
   top: 27.5%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .cube-container {
   position: fixed;
-  top: 80%;
+  top: 85%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  perspective: 400px;
 }
-#cube {
-    width: 100px;   
-    transform-style: preserve-3d; 
-    animation: rotate 15s linear infinite;
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 0.2s;
+  animation: rotate 15s linear infinite;
 }
-
-#cube div {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    opacity: 0.9 ;
-    color: white;
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  box-shadow: 0 0 0 0.5pt rgba(0,0,0,0.5);
 }
-
-#front {
-    transform: translateZ(50px);
-    background: transparent;
-    outline: auto;
-    outline-width: 2px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px ;
-}
-
-
-#back {
-    transform: rotateY(180deg) translateZ(50px);
-    background: transparent;
-    outline: auto;
-    outline-width: 2px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px ;   
-}
-
-#left {
-    transform: rotateY(-90deg) translateX(-50px);
-    transform-origin: left;
-    background: transparent;
-    outline: auto;
-    outline-width: 2px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px ;  
-}
-
-#right {
-    transform: rotateY(90deg) translateX(50px);
-    transform-origin: right;
-    background: transparent;  
-    outline: auto;
-    outline-width: 2px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px ;  
-}
-
-#top {
-    transform: rotateX(-90deg) translateY(-50px);
-    transform-origin: top;
-    background: transparent;
-    outline: auto;
-    outline-width: 2px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px ;   
-}
-
-#bottom {
-    transform: rotateX(90deg) translateY(50px);
-    transform-origin: bottom;
-    background: transparent;
-    outline: auto;
-    outline-width: 2px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px ;   
+.front  { transform: rotateY(  0deg) translateZ(50px); }
+.right  { transform: rotateY( 90deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX( 90deg) translateZ(50px); }
+.bottom {transform: rotateX(-90deg) translateZ(50px); }
+/* hide the box so only the shadow is visible */
+.shadow {
+  width: 0;
+  height: 0;
+  transform: rotateX(90deg) translateZ(-250px) translateX(50px);
+  box-shadow: 0 0 30px 100px rgba(0,0,0,0.3);
+  opacity: 0.9;
 }
 
 @keyframes rotate {
     0% { transform: rotateX(-45deg) rotateY(45deg) rotateZ(0deg); }
     100% { transform: rotateX(-45deg) rotateY(405deg) rotateZ(0deg); }
-}
-.shadow {
-    width:100px;
-    height:100px;
-    background: rgba(0,0,0,0.5);
-    box-shadow: 0 0 50px 50px rgba(0,0,0,0.5);
-    -webkit-transform: rotateX(90deg) translateZ(-250px) rotateY(180deg) translateX(0px);
-
 }
 </style>
