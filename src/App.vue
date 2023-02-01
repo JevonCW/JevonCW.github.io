@@ -79,11 +79,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
-@font-face {
-    font-family: Cinzel;
-    src: url('~@/assets/fonts/cinzel/Cinzel-Regular.ttf');
-}
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap%27");
 
 .main{
   max-width: 100%;
