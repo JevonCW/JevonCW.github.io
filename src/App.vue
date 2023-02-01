@@ -96,7 +96,7 @@ export default {
 .title {
   font-family: Cinzel;
   font-size: 95px;
-  color: rgb(196, 196, 196);
+  color: white;
   position: fixed;
   top: 10%;
   left: 50%;
