@@ -1,43 +1,44 @@
 <template>
   <div class="main">
+    <div class="title">Jevon Watson</div>
+    <div class="container">
 
-  <div class="title">Jevon Watson</div>
-
-  <div class="img-container">
-    <div class="img-left">
-      <div class="frame">
-        <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" ></a>
+      <div class="img-left">
+        <div class="frame">
+          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" ></a>
+        </div>
+        <div class="frame">
+          <a href="/about"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png"></a>
+        </div>
       </div>
-      <div class="frame">
-        <a href="/about"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png"></a>
+
+      <div class="center">
+        <div class="frame-main">
+          <a href="/resume"><img  lass="frame-img" src="./assets/img/Abstract3D-0-text.png"></a>
+        </div>
+      </div>
+
+      <div class="img-right">
+        <div class="frame">
+          <a href="/projects"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png"></a>
+        </div>
+        <div class="frame">
+          <a href="/contact"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png"></a>
+        </div>
       </div>
     </div>
-    <div class="center">
-      <div class="frame-main">
-        <a href="/resume"><img  lass="frame-img" src="./assets/img/Abstract3D-0-text.png"></a>
-      </div>
-    </div>
-    <div class="img-right">
-      <div class="frame">
-        <a href="/projects"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png"></a>
-      </div>
-      <div class="frame">
-        <a href="/contact"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png"></a>
+    <div class="cube-container">
+      <div id="cube">
+        <div id="front"></div>
+        <div id="back"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="top"></div>
+        <div id="bottom"></div>
+        <div class="shadow"></div>
       </div>
     </div>
   </div>
-<div class="cube-container">
-  <div id="cube">
-    <div id="front"></div>
-    <div id="back"></div>
-    <div id="left"></div>
-    <div id="right"></div>
-    <div id="top"></div>
-    <div id="bottom"></div>
-    <div class="shadow"></div>
-  </div>
-</div>
-</div>
 </template>
 
 <script>
@@ -46,8 +47,7 @@ import "@/assets/styles/global.css";
 
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
 };
 </script>
 
@@ -65,23 +65,24 @@ export default {
   padding: 0px 20px 0px 20px;
   background: radial-gradient(75% 35% at 50% 95%, rgba(33, 33, 35, 0.6) 20%, rgba(80, 82, 98, 0) 90%), 
   linear-gradient(rgba(28, 35, 50, 0) 15%, rgb(228, 228, 228) 80%);
-	z-index: -1;
 }
 .title {
   font-family: Cinzel;
   font-size: 95px;
   color: rgb(196, 196, 196);
   position: fixed;
-  top: 12%;
+  top: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  overflow: visible;
+  white-space: nowrap;
 }
-.img-container {
+.container {
   position: fixed;
   top: 55%;
   left: 50%;
-  width: 900px;
+  width: 65%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: flex;
