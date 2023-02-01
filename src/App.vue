@@ -1,6 +1,15 @@
 <template>
   <div class="main">
+
+    <div>
+    <AboutModal v-show="showAbout" @close-modal="showAbout = false"/>
+    <ProjectsModal v-show="showProjects" @close-modal="showProjects = false"/>
+    <ContactModal v-show="showContact" @close-modal="showContact = false"/>
+    <ResumeModal v-show="showResume" @close-modal="showResume = false"/>
+    </div>
+
     <div class="title">Jevon Watson</div>
+
     <div class="container">
 
       <div class="img-left">
@@ -8,22 +17,22 @@
           <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" ></a>
         </div>
         <div class="frame">
-          <a href="/about"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png"></a>
+          <a @click="showAbout = true"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png"></a>
         </div>
       </div>
 
       <div class="center">
         <div class="frame-main">
-          <a href="/resume"><img  lass="frame-img" src="./assets/img/Abstract3D-0-text.png"></a>
+          <a @click="showResume = true"><img  lass="frame-img" src="./assets/img/Abstract3D-0-text.png"></a>
         </div>
       </div>
 
       <div class="img-right">
         <div class="frame">
-          <a href="/projects"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png"></a>
+          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png"></a>
         </div>
         <div class="frame">
-          <a href="/contact"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png"></a>
+          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png"></a>
         </div>
       </div>
     </div>
@@ -45,9 +54,27 @@
 import "@/assets/styles/reset.css";
 import "@/assets/styles/global.css";
 
+import AboutModal from './components/AboutModal.vue'
+import ProjectsModal from './components/ProjectsModal.vue'
+import ContactModal from './components/ContactModal.vue'
+import ResumeModal from './components/ResumeModal.vue'
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    AboutModal, 
+    ProjectsModal, 
+    ContactModal, 
+    ResumeModal,
+  },
+  data() {
+    return {
+      showAbout: false,
+      showProjects: false,
+      showContact: false,
+      showResume: false,
+    }
+  },
 };
 </script>
 
