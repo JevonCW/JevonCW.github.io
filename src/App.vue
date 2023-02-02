@@ -5,7 +5,6 @@
     <AboutModal v-show="showAbout" @close-modal="showAbout = false"/>
     <ProjectsModal v-show="showProjects" @close-modal="showProjects = false"/>
     <ContactModal v-show="showContact" @close-modal="showContact = false"/>
-    <ResumeModal v-show="showResume" @close-modal="showResume = false"/>
     </div>
 
     <div class="title">Jevon Watson</div>
@@ -23,7 +22,7 @@
 
       <div class="center">
         <div class="frame-main">
-          <a @click="showResume = true"><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt=""></a>
+          <a href="./assets/docs/Placeholder-PDF.pdf" download><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt=""></a>
         </div>
       </div>
 
@@ -36,6 +35,7 @@
         </div>
       </div>
     </div>
+
     <div class="cube-container">
       <div class="cube">
         <div class="face front"></div>
@@ -47,6 +47,7 @@
         <div class="shadow"></div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -60,7 +61,6 @@ import "@/assets/styles/cube.css";
 import AboutModal from './components/AboutModal.vue'
 import ProjectsModal from './components/ProjectsModal.vue'
 import ContactModal from './components/ContactModal.vue'
-import ResumeModal from './components/ResumeModal.vue'
 
 export default {
   name: "App",
@@ -68,14 +68,12 @@ export default {
     AboutModal,
     ProjectsModal,
     ContactModal,
-    ResumeModal,
   },
   data() {
     return {
       showAbout: false,
       showProjects: false,
       showContact: false,
-      showResume: false,
     }
   },
 };
