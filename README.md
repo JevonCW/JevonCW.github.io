@@ -1,4 +1,8 @@
-## Project setup
+# Personal Portfolio Site
+> A simple VueJS page hosted @ https://jevoncw.github.io/
+
+## Usage
+
 ```
 npm install
 ```
