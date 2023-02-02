@@ -13,8 +13,7 @@
     "troisjs": "^0.3.4",
     "vue": "^2.6.11",
     "vue-3d-model": "^1.4.1",
-    "vue-model-viewer": "^1.0.8",
-    "vue-pdf-embed": "^1.1.5"
+    "vue-model-viewer": "^1.0.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
