@@ -1,0 +1,47 @@
+/* 3D Cube Styling */
+
+.cube-container {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    perspective: 400px;
+  }
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 0.2s;
+    animation: rotate 15s linear infinite;
+  }
+  .face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    box-shadow: 0 0 0 0.5pt rgba(0,0,0,0.5);
+  }
+  .front  { transform: rotateY(  0deg) translateZ(50px); }
+  .right  { transform: rotateY( 90deg) translateZ(50px); }
+  .back   { transform: rotateY(180deg) translateZ(50px); }
+  .left   { transform: rotateY(-90deg) translateZ(50px); }
+  .top    { transform: rotateX( 90deg) translateZ(50px); }
+  .bottom {transform: rotateX(-90deg) translateZ(50px); }
+  /* hide the box so only the shadow is visible */
+  .shadow {
+    width: 0;
+    height: 0;
+    transform: rotateX(90deg) translateZ(-250px) translateX(50px);
+    box-shadow: 0 0 30px 100px rgba(0,0,0,0.3);
+    opacity: 0.9;
+  }
+  
+  /* 3D Cube Animation */
+  @keyframes rotate {
+      0% { transform: rotateX(-45deg) rotateY(45deg) rotateZ(0deg); }
+      100% { transform: rotateX(-45deg) rotateY(405deg) rotateZ(0deg); }
+  }
