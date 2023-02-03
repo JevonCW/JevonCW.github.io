@@ -28,14 +28,6 @@
     font-size: 56px;
     margin: 10px;
   }
-  p {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    box-shadow: 0 0 0 0.5pt rgba(0,0,0,0.5)
-  }
   button {
     font-family: "Cinzel",serif;
     font-weight: 500;
