@@ -22,7 +22,7 @@
 
       <div class="center">
         <div class="frame-main">
-          <a href="./assets/docs/Placeholder-PDF.pdf" download><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt=""></a>
+          <a href="./assets/docs/Jevon-Watson-Resume.pdf" download><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt=""></a>
         </div>
       </div>
 
