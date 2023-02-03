@@ -36,12 +36,14 @@
 }
 
 .list-item {
-  line-height: 4;
+  line-height: 3;
   color: #aaa;
 }
 
 .contact-text {
-  font: 300 18px 'Lato', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
   letter-spacing: 1.9px;
   color: white;
 }
