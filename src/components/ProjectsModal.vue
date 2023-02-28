@@ -1,4 +1,5 @@
 <template>
+  <transition name="fade" appear>
     <div class="modal-overlay">
       <div class="modal">
         <h6>Project Demos</h6>
@@ -8,6 +9,7 @@
         <button @click="$emit('close-modal')">Close</button>
       </div>
     </div>
+  </transition>
   </template>
   
   <script>

@@ -1,4 +1,5 @@
 <template>
+  <transition name="fade" appear>
     <div class="modal-overlay">
       <div class="modal">
         <h6>About Me</h6>
@@ -6,12 +7,13 @@
         <br>
         <p>I am a software developer based in Western Australia.</p>
         <br>
-        <p>My career thus far has seen me focused on front end web application development. I have experience in a variety of programming languages and frameworks and possess a continuous desire to learn and improvemy skill set.</p>
+        <p>Experienced in a variety of programming languages and frameworks. I have several years experience developing software in small to medium agile development teams focused on delivering quality applications to my clients.</p>
         <br>
         <hr>
         <button @click="$emit('close-modal')">Close</button>
       </div>
     </div>
+  </transition>
   </template>
   
   <script>
