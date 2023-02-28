@@ -2,36 +2,36 @@
   <div class="main">
 
     <div>
-    <AboutModal v-show="showAbout" @close-modal="showAbout = false"/>
-    <ProjectsModal v-show="showProjects" @close-modal="showProjects = false"/>
-    <ContactModal v-show="showContact" @close-modal="showContact = false"/>
+      <AboutModal v-show="showAbout" @close-modal="showAbout = false"/>
+      <ProjectsModal v-show="showProjects" @close-modal="showProjects = false"/>
+      <ContactModal v-show="showContact" @close-modal="showContact = false"/>
     </div>
 
     <div class="title">Jevon Watson</div>
 
-    <div class="container">
+    <div class="imgcontainer">
 
       <div class="img-left">
         <div class="frame">
-          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" alt=""></a>
+          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" loading="lazy" alt="..."></a>
         </div>
         <div class="frame">
-          <a @click="showAbout = true"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png" alt=""></a>
+          <a @click="showAbout = true"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png" loading="lazy" alt="..."></a>
         </div>
       </div>
 
       <div class="center">
         <div class="frame-main">
-          <a href="./assets/docs/Jevon-Watson-Resume.pdf" download><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt=""></a>
+          <a href="./assets/docs/Jevon-Watson-Resume.pdf" download><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" loading="lazy" alt="..."></a>
         </div>
       </div>
 
       <div class="img-right">
         <div class="frame">
-          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png" alt=""></a>
+          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png" loading="lazy" alt="..."></a>
         </div>
         <div class="frame">
-          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png" alt=""></a>
+          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png" loading="lazy" alt="..."></a>
         </div>
       </div>
     </div>
@@ -47,14 +47,14 @@
         <div class="shadow"></div>
       </div>
     </div>
+  </div>  
 
-  </div>
 </template>
 
 <script>
 import "@/assets/styles/reset.css";
 import "@/assets/styles/global.css";
-import "@/assets/styles/nav.css";
+import "@/assets/styles/frames.css";
 import "@/assets/styles/cube.css";
 
 
@@ -98,6 +98,7 @@ export default {
 /* Title Styling */
 
 .title {
+  display: block;
   font-family: "Cinzel",serif;
   font-size: 95px;
   color: rgb(196, 196, 196);
@@ -105,7 +106,6 @@ export default {
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: visible;
   white-space: nowrap;
 }
 </style>

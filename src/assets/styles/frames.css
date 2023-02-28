@@ -1,10 +1,10 @@
-/* Navigation Styling */
+/* Frames Styling */
 
-.container {
+.imgcontainer {
     position: fixed;
     top: 55%;
     left: 50%;
-    width: 65%;
+    width: calc(100vh - 50px);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;}
