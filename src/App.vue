@@ -13,7 +13,7 @@
 
       <div class="img-left">
         <div class="frame">
-          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" loading="lazy" alt="..."></a>
+          <a href="https://github.com/JevonCW" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-1-text.png" alt="..."></a>
         </div>
         <div class="frame">
           <a @click="showAbout = true"><img class="frame-img" src="./assets/img/Abstract3D-2-text.png" loading="lazy" alt="..."></a>
@@ -22,16 +22,16 @@
 
       <div class="center">
         <div class="frame-main">
-          <a href="./assets/docs/Jevon-Watson-Resume.pdf" download><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" loading="lazy" alt="..."></a>
+          <a href="https://docs.google.com/document/d/1LN7y1Por9bc9ChufqXc88cvLTQmPHC9tjZ-8JIM5fGg/edit?usp=sharing" target=”_blank”><img class="frame-img" src="./assets/img/Abstract3D-0-text.png" alt="..."></a>
         </div>
       </div>
 
       <div class="img-right">
         <div class="frame">
-          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png" loading="lazy" alt="..."></a>
+          <a @click="showProjects = true"><img class="frame-img" src="./assets/img/Abstract3D-3-text.png" alt="..."></a>
         </div>
         <div class="frame">
-          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png" loading="lazy" alt="..."></a>
+          <a @click="showContact = true"><img class="frame-img" src="./assets/img/Abstract3D-4-text.png" alt="..."></a>
         </div>
       </div>
     </div>
